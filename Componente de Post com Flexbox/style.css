@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #f0f4f8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/*3.COMPONENTE DO POST*/
+.post-card {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+    width: 100%; /*Ocupa 100% do seu pai(o body)*/
+    max-width: 700px; /*largura max*/
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* 4.Estilos dos itens filhos do flexbox */
+.post-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 20px;
+}
+
+.post-title{
+    margin-top:  0px;
+    margin-bottom: 10px;
+    color: #2d3748;
+}
+
+.post-excerpt{
+    margin-bottom: 0px;
+    color: #718096;
+    line-height: 1.6;
+}
+@media(max-width:500px){
+    .post-card{
+        flex-direction: column;
+    }
+    .post-image{
+        width: 100%;
+        height: 200%;
+    }
+}
